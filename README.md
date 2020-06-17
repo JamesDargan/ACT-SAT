@@ -7,15 +7,19 @@ Every year, large and small media outlets run articles discussing the relative p
 
 ## Executive Summary
 
-We find that on average, a 10 percentage point increase in student participation on the ACT correlates with a 0.5 point decrease in state average ACT composite score. Similarly, we find a 10 percentage point increase in SAT participation correlates with a 21 point drop in state average SAT score. Utilizing a simple linear regression model with state level participation rates, we find participation rates alone explain over 70% of the variance between state averages on each of these tests. Further, our model predicts state average SAT scores with a mean absolute error of 35 points and state average ACT scores with a mean absolute error of 0.9 points. This reduces error by 50% compared to the average baseline which produced an SAT mean absolute error of 79 point and an ACT mean absolute error of 1.8 points. Utilizing each subject test, we repeat our OLS model and find our conclusions are robust with consistent coefficient estimates and similar R-squared estimates.
+We find that on average, a 10 percentage point increase in student participation on the ACT correlates with a 0.5 point decrease in state average ACT composite score. Similarly, we find a 10 percentage point increase in SAT participation correlates with a 21 point drop in state average SAT score. Utilizing a simple linear regression model with state participation rates, we find participation rates alone explain over 70% of the variance between state averages on each of these college admissions exams. 
+
+Our univariate linear regression model predicts state average SAT scores with a mean absolute error of 35 points and state average ACT scores with a mean absolute error of 0.9 points. Comparatively, a baseline utilizing national averages alone produces a mean absolute error of 79 points predicting SAT state average and a mean absolute error of 1.8 points predicting ACT state average. thus our single feature of participation rates reduces prediction error by 50%. Utilizing each subject test, we repeat our OLS model and find our conclusions are robust with consistent coefficient estimates across subject test score predictions and find similar R-squared estimates.
 
 Utilizing 3 case studies (Illinois, Colorado, and Rhode Island), we provide evidence of a causal connection by documenting dramatic reductions in state averages following policy changes that shift participation rates upwards by over 25 percentage points. 
+
+Finally, we attempt to improve our linear model of state averages by including state averages for features relating to the quality of the education system for each state, specifically students-per-teacher, spending-per-student, and average teacher salary as a proxy for teacher quality. We find these features provide minimal explanatory power to our models because the participation rate effect dominates. Further, we find the sign of the coefficients for these variables differs when using SAT or ACt as our target variable, suggesting the self-selection of participation in these exams leads to invalid estimates of the qualitative relationship of these state characteristics to test outcomes.
 
 
 
 ## Conclusion
 
-This repo demonstrates the fundamental flaw in treating state averages as representative of state systems at large when the participants are not randomly selected. The SAT and ACT are just one context where non-random, self-selecting populations generate outcomes that get reported as objective measures to compare states in news media. While unable to claim causality, the ability of a single variable regression model to consistently generate an R-squared over 70 and the case-studies of Colorado, Illinois, and Rhode Island provide strong evidence that state averages on standardized test primarily reflect the testing policies of those states and their subsequent participation rates, rather than any meaningful difference in quality of education.
+This repo demonstrates the fundamental flaw in treating state averages as representative of state systems at large when the participants are not randomly selected. The SAT and ACT are just one context where non-random, self-selecting populations generate outcomes that get reported as objective measures to compare states in news media. The ability of a single variable regression model to consistently generate an R-squared over 70 and the case-studies of Colorado, Illinois, and Rhode Island provide strong evidence that state averages on standardized test primarily reflect the testing policies of those states and their subsequent participation rates rather than any meaningful difference in quality of education.
 
 
 
@@ -59,12 +63,12 @@ Whaley, M. (2017, March 6). Colorado juniors face new, revamped college exam in 
 
 All test score averages and state statistics collected from the National Center of Education Statistics' Digest of Education Statistics utilizing the following tables:
 
-Table 226.40 (2018) [link](https://nces.ed.gov/programs/digest/d18/tables/dt18_226.40.asp)
-Table 226.60 (2017) [link](https://nces.ed.gov/programs/digest/d17/tables/dt17_226.60.asp)
-Table 226.60 (2018) [link](https://nces.ed.gov/programs/digest/d18/tables/dt18_226.60.asp)
-Table 208.40 (2018) [link](https://nces.ed.gov/programs/digest/d18/tables/dt18_208.40.asp)
-Table 211.60 (2019) [link](https://nces.ed.gov/programs/digest/d19/tables/dt19_211.60.asp)
-Table 236.70 (2019) [link](https://nces.ed.gov/programs/digest/d19/tables/dt19_236.70.asp)
+Table 226.40 (2018) [link](https://nces.ed.gov/programs/digest/d18/tables/dt18_226.40.asp)<br>
+Table 226.60 (2017) [link](https://nces.ed.gov/programs/digest/d17/tables/dt17_226.60.asp)<br>
+Table 226.60 (2018) [link](https://nces.ed.gov/programs/digest/d18/tables/dt18_226.60.asp)<br>
+Table 208.40 (2018) [link](https://nces.ed.gov/programs/digest/d18/tables/dt18_208.40.asp)<br>
+Table 211.60 (2019) [link](https://nces.ed.gov/programs/digest/d19/tables/dt19_211.60.asp)<br>
+Table 236.70 (2019) [link](https://nces.ed.gov/programs/digest/d19/tables/dt19_236.70.asp)<br>
 
 Census regions csv file pulled from Chris Halpert's GitHub and verified with U.S. Census. https://github.com/cphalpert/census-regions
 
