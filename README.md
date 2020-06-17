@@ -28,14 +28,17 @@ NB 1: data_prep.ipynb
 - Extract information for state average SAT Scores, ACT Scores, and NAEP Scores
 - Extract state spending-per-student, students-per-teacher, and average teacher salary 
 - Generate 3 CSV files
+
 NB 2: EDA_state_averages.ipynb
 - Identify highest and lowest average states for each test
 - Map SAT and ACT scores by state
 - Map relative SAT vs ACT participation rates
+
 NB 3: Model_Participation_Impact.ipynb
 - Explore correlation of test averages and participation rates
 - Model test scores as function of participation rate
 - Identify 3 case studies of changes in participation causing changes in state averages
+
 NB 4: Model_Education_Stats.ipynb
 - Explore relative state rankings of 3 standardized tests
 - Incorporate state education system statistics into model of state average scores
